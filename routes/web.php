@@ -22,7 +22,7 @@ $router->group(['prefix'=>'api/v1'],function ($app){
 
         $app->get('view/{id}','PostsController@viewPost');
 
-        $app->put('edit/{id}','PostsController@updatePost');
+        $app->put('e    dit/{id}','PostsController@updatePost');
 
         $app->delete('delete/{id}','PostsController@deletePost');
 
