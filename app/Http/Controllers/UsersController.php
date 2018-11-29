@@ -29,5 +29,9 @@ class UsersController extends Controller
 
             return response()->json($user);
         }
+        public function view(){
+            $user = User::all();
+            return response()->json($user);
+        }
 
 }
