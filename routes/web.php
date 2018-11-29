@@ -22,17 +22,19 @@ $router->group(['prefix'=>'api/v1'],function ($app){
 
         $app->get('view/{id}','PostsController@viewPost');
 
-        $app->put('e    dit/{id}','PostsController@updatePost');
+        $app->put('edit/{id}','PostsController@updatePost');
 
         $app->delete('delete/{id}','PostsController@deletePost');
 
-        $app->get('index','PostsController@index');
+        $app->get('view','PostsController@index');
     });
     $app->group(['prefix'=>'users'],function ($app){
 
         $app->post('add','UsersController@add');
+        $app->get('view','UsersController@view');
 
     });
+
 
 
 });
