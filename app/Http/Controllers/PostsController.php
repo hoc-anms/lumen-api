@@ -25,11 +25,13 @@ class PostsController extends Controller
         return response()->json($post);
     }
     public function updatePost(Request $request,$id){
+
         $post=Post::find($id);
         $post->title=$request->input('title');
         $post->body=$request->input('body');
         $post->views=$request->input('views');
         $post->save();
+
 
         return response()->json($post);
     }
