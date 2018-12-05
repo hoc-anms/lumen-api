@@ -11,7 +11,7 @@ class PostsController extends Controller
     /**
      * Create a new controller instance.
      *
-     * @return void
+     * @return void0
      */
     public function createPost(Request $request){
         $post=Post::create($request->all());
@@ -52,5 +52,9 @@ class PostsController extends Controller
         $post = Post::all();
         return response()->json($post);
     }
+    public function test(){
+
+    }
+
 
 }
